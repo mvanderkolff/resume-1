@@ -1,4 +1,4 @@
-Forked from github.com/sb2nov/resume. This is Michael van der Kolff's resume.
+Forked from https://github.com/sb2nov/resume. This is Michael van der Kolff's resume.
 
 ### Build using Docker
 
