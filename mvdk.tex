@@ -6,14 +6,15 @@
 \geometry{margin=0.65in}
 \columnratio{0.15,0.85}
 \setlength{\columnsep}{1.5em}
-\linespread{1.05}
-\setlist[itemize]{leftmargin=1.2em,itemsep=3pt,topsep=5pt}
+\linespread{1.0}
+\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt}
 \pagestyle{empty}
 \hypersetup{pdftitle={Michael van der Kolff -- Resume},pdfauthor={Michael van der Kolff}}
 \newcommand{\role}[4]{\textbf{#1}\hfill #2\\\textit{#3}\hfill\textit{#4}\par}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\medskip}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{3pt}}
 \newcommand{\resumeSubSubheading}[2]{\textit{#1}\hfill\textit{#2}\par}
+\newcommand{\resheading}[1]{\par\vspace{5pt}{\scshape #1}\par\vspace{1pt}\hrule\vspace{4pt}}
 \begin{document}
 \restitle{
 name={\fontsize{16}{19}\selectfont Michael van der Kolff},
@@ -25,16 +26,16 @@ linkedinurl={https://www.linkedin.com/in/mvdkolff}
 }
 \vspace{-1em}
 \href{https://github.com/mvanderkolff}{github.com/mvanderkolff}
-\vspace{1em}
-\begin{ressection}[title=Experience]
+\vspace{2pt}
+\resheading{Experience}
 \role{Commonwealth Bank of Australia}{Sydney, NSW}{Senior SRE}{March 2025 -- Present}
 \resumeItemListStart
 \item Maintained SRE standards for integrations with a centrally operated observability platform, challenging poor-quality alerts and maintaining agreed service boundaries.
 \item Built on-call and incident analytics from PagerDuty data using Aurora PostgreSQL and Grafana.
-\item Led internal customers' migration from on-premises Grafana to Grafana Cloud, surfacing cross-team blockers for management intervention and engineering secrets-management integrations with External Secrets Operator and Vault. Addressed Security's concerns about long-lived bearer tokens through frequent rotation and lifecycle monitoring of the migrated applications' credentials.
+\item Led internal customers' migration to Grafana Cloud, coordinating dependencies and management escalations. Engineered Vault and External Secrets Operator integrations enabling frequent application-credential rotation to meet Security requirements.
 \item Built an IdentityIQ MCP pilot for evidence-backed access reviews, with explicit consent before writes; reduced my BAU time by approximately 20\%.
 \resumeItemListEnd
-\ressep
+
 \role{Meta}{Netherlands (Remote)}{Production Engineer}{October 2022 -- November 2023}
 \resumeItemListStart
 \item Contributed deployment-safety improvements to deletion systems operating under compliance requirements.
@@ -51,35 +52,25 @@ linkedinurl={https://www.linkedin.com/in/mvdkolff}
 \resumeItemListStart
 \item Implemented PacketIO over gRPC in the Platforms Networking switch stack and developed functional tests.
 \resumeItemListEnd
-\end{ressection}
-\newpage
-\begin{ressection}[title={Earlier roles}]
-\role{University of Wollongong}{Wollongong, NSW}{Tutor}{August 2012 -- November 2015}
-\resumeItemListStart
-\item Tutored C\#, C++, algorithms and Unix systems programming, including complexity analysis, networking and multithreading.
-\resumeItemListEnd
-\role{Tibra Capital}{Bondi Junction, NSW}{Intern}{Summer 2012--2013}
-\resumeItemListStart
-\item Built end-to-end tests using IronPython and .NET, adapting Paramiko for IronPython compatibility.
-\item Profiled and optimised options-pricing performance using Linux perf.
-\resumeItemListEnd
-\role{NVTech Pty Ltd}{Gymea, NSW}{Contract Systems Administrator}{September 2001 -- December 2013}
-\resumeItemListStart
-\item Deployed and supported Linux file, email and calendar services for small businesses.
-\item Migrated an Access backend to Firebird SQL and developed shared VBA interface libraries.
-\resumeItemListEnd
-\end{ressection}
-\begin{ressection}[title=Education]
-\textbf{University of Wollongong}\hfill Wollongong, NSW\\
-Bachelor of Mathematics and Bachelor of Computer Science\\
-Both with Distinction\hfill August 2011 -- December 2015
-\end{ressection}
-\begin{ressection}[title=Skills]
-\textbf{Languages:} Python, Go, C++, SQL, Java, Haskell\par\medskip
-\textbf{Reliability and collaboration:} Incident management, mentoring\par\medskip
+
+
+\resheading{Earlier roles}
+\textbf{University of Wollongong} --- Tutor\hfill August 2012 -- November 2015\\
+Taught C\#, C++, algorithms and Unix systems programming, including networking and multithreading.\par\vspace{3pt}
+\textbf{Tibra Capital} --- Intern\hfill Summer 2012--2013\\
+Built IronPython/.NET integration tests, adapted Paramiko for IronPython and profiled options pricing using Linux perf.\par\vspace{3pt}
+\textbf{NVTech Pty Ltd} --- Contract Systems Administrator\hfill September 2001 -- December 2013\\
+Supported Linux business services; migrated an Access backend to Firebird SQL and developed shared VBA libraries.
+\resheading{Education}
+\textbf{University of Wollongong}\hfill August 2011 -- December 2015\\
+Bachelor of Mathematics and Bachelor of Computer Science, both with Distinction
+
+\resheading{Skills}
+\textbf{Languages:} Python, Go, C++, SQL, Java, Haskell\quad\textbf{Practice:} Incident management, mentoring\\
 \textbf{Technologies:} PostgreSQL, Firebird, Kubernetes, GCE, AWS, Grafana, Mimir, Alertmanager, Vault
-\end{ressection}
+
 \end{document}
+
 
 
 
